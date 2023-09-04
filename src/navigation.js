@@ -3,88 +3,104 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
-      links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],
+      text: "Home",
+      href: getPermalink('/')
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      text: "Services",
+      href: getPermalink('/')
     },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
+      text: "About Us",
+      href: getPermalink('/')
     },
+    {
+      text: "Contact",
+      href: getPermalink('/')
+    },
+    // {
+    //   text: 'Homes',
+    //   links: [
+    //     {
+    //       text: 'SaaS',
+    //       href: getPermalink('/homes/saas'),
+    //     },
+    //     {
+    //       text: 'Startup',
+    //       href: getPermalink('/homes/startup'),
+    //     },
+    //     {
+    //       text: 'Mobile App',
+    //       href: getPermalink('/homes/mobile-app'),
+    //     },
+    //     {
+    //       text: 'Personal',
+    //       href: getPermalink('/homes/personal'),
+    //     },
+    //   ],
+    // },
+    // {
+    //   text: 'Pages',
+    //   links: [
+    //     {
+    //       text: 'Features (Anchor Link)',
+    //       href: getPermalink('/#features'),
+    //     },
+    //     {
+    //       text: 'Services',
+    //       href: getPermalink('/services'),
+    //     },
+    //     {
+    //       text: 'Pricing',
+    //       href: getPermalink('/pricing'),
+    //     },
+    //     {
+    //       text: 'About us',
+    //       href: getPermalink('/about'),
+    //     },
+    //     {
+    //       text: 'Contact',
+    //       href: getPermalink('/contact'),
+    //     },
+    //     {
+    //       text: 'Terms',
+    //       href: getPermalink('/terms'),
+    //     },
+    //     {
+    //       text: 'Privacy policy',
+    //       href: getPermalink('/privacy'),
+    //     },
+    //   ],
+    // },
+    // {
+    //   text: 'Landing',
+    //   links: [
+    //     {
+    //       text: 'Lead Generation',
+    //       href: getPermalink('/landing/lead-generation'),
+    //     },
+    //     {
+    //       text: 'Long-form Sales',
+    //       href: getPermalink('/landing/sales'),
+    //     },
+    //     {
+    //       text: 'Click-Through',
+    //       href: getPermalink('/landing/click-through'),
+    //     },
+    //     {
+    //       text: 'Product Details (or Services)',
+    //       href: getPermalink('/landing/product'),
+    //     },
+    //     {
+    //       text: 'Coming Soon or Pre-Launch',
+    //       href: getPermalink('/landing/pre-launch'),
+    //     },
+    //     {
+    //       text: 'Subscription',
+    //       href: getPermalink('/landing/subscription'),
+    //     },
+    //   ],
+    // },
     {
       text: 'Blog',
       links: [
@@ -111,11 +127,11 @@ export const headerData = {
       ],
     },
     {
-      text: 'Widgets',
+      text: 'Careers',
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Get Started', href: 'https://github.com/cosmic-stack', target: '_blank' }],
 };
 
 export const footerData = {
@@ -178,6 +194,6 @@ export const footerData = {
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    Cosmic Stack · ${new Date().getFullYear()} - All rights reserved.
   `,
 };
