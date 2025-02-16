@@ -10,6 +10,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Cosmic Stack',
@@ -72,16 +73,28 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
-    stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
-    ]}
-  />
+  <Features2
+  title="Why Leading Enterprises Choose Cosmic Stack"
+  subtitle="Delivering enterprise-grade solutions that drive digital transformation"
+  items={[
+    {
+      title: 'Cloud Architecture Excellence',
+      description: 'Leverage our expertise in AWS, Azure, and GCP to build scalable, secure cloud infrastructures that power your business growth.',
+      icon: 'tabler:cloud-computing',
+    },
+    {
+      title: 'AI & Machine Learning',
+      description: 'Transform your data into actionable insights with our custom AI solutions, from predictive analytics to automated workflows.',
+      icon: 'tabler:brain',
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-grade security protocols and compliance measures ensure your systems and data are protected at every layer.',
+      icon: 'tabler:shield-lock',
+    },
+  ]}
+/>
+
 
   <!-- Brands Widget ****************** -->
 
@@ -176,89 +189,74 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
-    id="features"
-    title="Our main features"
-    subtitle="Empowering your digital journey with tailored solutions, cross-platform excellence, streamlined deployment, cloud power, comprehensive suite, robust protection, and cutting-edge solutions. Unleash the potential of Cosmic Stack."
-    columns={3}
-    items={[
-      {
-        title: 'Tailored Solutions',
-        description:
-          'At Cosmic Stack, we believe in the power of tailor-made solutions. Our "Customized Products" feature embodies this philosophy. We understand that each business is unique with its distinct challenges and goals. To address this, we create bespoke IT solutions designed explicitly for your organization. Whether you need a specialized software application, a unique web platform, or a distinctive IT product, we work closely with you to conceptualize, design, and develop the perfect solution.',
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Cross-Platform Expertise',
-        description: 'In a world where mobile apps dominate, having a strong digital presence is crucial. Our "App Development" service showcases our expertise in creating mobile applications across various platforms. We ensure that your app reaches a broad and diverse audience, offering exceptional user experiences and functionality on both Android and iOS devices.',
-        icon: 'tabler:picture-in-picture',
-      },
-      {
-        title: 'Streamlined Deployment',
-        description:
-          'Efficiency in software development and deployment is the hallmark of our "DevOps Services." Our team employs industry best practices to streamline the entire software development life cycle. From coding to testing, deployment, and monitoring, we eliminate bottlenecks and ensure a seamless, agile, and efficient process, resulting in faster time-to-market and higher quality software.',
-        icon: 'tabler:adjustments-horizontal',
-      },
-      {
-        title: 'Cloud Power',
-        description: '"Cloud Computing" is at the forefront of modern IT infrastructure. We empower your business to harness the full potential of cloud technology. Our experts assist you in migrating to the cloud, managing data and applications securely, and taking advantage of the scalability and flexibility offered by cloud platforms. This ensures that your IT resources are always aligned with your business needs.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Comprehensive Suite',
-        description:
-          'Our "Business Suite" is an all-in-one solution designed to boost your business operations. It includes a comprehensive set of tools and applications such as customer relationship management (CRM), project management, and more. These tools are designed to enhance productivity, improve decision-making, and facilitate seamless collaboration across your organization. With our Business Suite, you can optimize your business processes and stay ahead in today\'s competitive landscape.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Continuous Innovation',
-        description: 'In the fast-paced world of technology, staying competitive means embracing innovation. "Cutting-Edge Solutions" is at the heart of what we do at Cosmic Stack. We are committed to continuous innovation in IT services and products. Our dedicated research and development teams keep a close eye on emerging technologies, industry trends, and evolving best practices. This allows us to offer you the latest and most advanced solutions to keep your business at the forefront of technology.',
-        icon: 'tabler:plug-connected',
-      },
-    ]}
-  />
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'Enterprise Cloud Solutions',
+      description: 'Secure, scalable infrastructure powered by AWS, Azure and GCP',
+      icon: 'tabler:cloud',
+    },
+    {
+      title: 'AI Integration',
+      description: 'Custom machine learning models and intelligent automation',
+      icon: 'tabler:brain',
+    },
+    {
+      title: 'DevOps Excellence', 
+      description: 'Streamlined CI/CD pipelines with 99.9% uptime guarantee',
+      icon: 'tabler:refresh',
+    }
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+    alt: 'Enterprise Technology Solutions',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Enterprise-Grade Technology
+    </h3>
+  </Fragment>
+</Content>
+
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'What are landing page templates?',
-        description:
-          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
-      },
-      {
-        title: 'Why should I use a template?',
-        description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
-      },
-      {
-        title: 'Can I preview templates before buying?',
-        description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
-      },
-      {
-        title: 'Do I need technical skills to use a template?',
-        description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
-      },
-      {
-        title: 'Can I use the template on multiple websites?',
-        description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
-      },
-      {
-        title: 'What if I need help with customization?',
-        description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
+  title="Frequently Asked Questions"
+  items={[
+    {
+      title: 'What cloud platforms do you support?',
+      description: 'We provide full-stack solutions across AWS, Azure, and Google Cloud Platform (GCP). Our certified architects design and implement scalable infrastructure tailored to your enterprise needs.',
+    },
+    {
+      title: 'How do you handle data security?',
+      description: 'We implement bank-grade security protocols including end-to-end encryption, regular penetration testing, and compliance with GDPR, HIPAA, and SOC 2 Type II standards.',
+    },
+    {
+      title: 'What is your typical enterprise implementation timeline?',
+      description: 'Enterprise deployments typically range from 2-6 months depending on complexity. Our proven agile methodology ensures continuous delivery with regular milestones and transparent progress tracking.',
+    },
+    {
+      title: 'Do you provide 24/7 support?',
+      description: 'Yes, enterprise clients receive round-the-clock support with guaranteed response times. Our global team provides continuous monitoring and incident management with a 99.9% uptime SLA.',
+    },
+    {
+      title: 'Can you integrate with existing systems?',
+      description: 'Absolutely. We specialize in seamless integration with legacy systems and third-party platforms through our robust API architecture and custom middleware solutions.',
+    },
+    {
+      title: 'What makes Cosmic Stack different from other providers?',
+      description: 'Our combination of enterprise-grade cloud expertise, AI integration capabilities, and proven track record with major corporations sets us apart. We deliver not just technology, but transformative business solutions.',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</FAQs>
+
 
   <!-- Features3 Widget ************** -->
 
