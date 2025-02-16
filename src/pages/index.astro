@@ -24,12 +24,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        target: '_blank',
+        // target: '_blank',
         text: 'Get Started',
-        href: 'https://github.com/cosmic-stack',
+        href: '/contact',
         icon: 'tabler:rocket',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more', href: '/about', icon: 'tabler:book' },
     ]}
   >
     <Fragment slot="title">
@@ -311,21 +311,23 @@ const metadata = {
   />
 
   <!-- CallToAction Widget *********** -->
+<CallToAction
+  actions={[{
+    variant: "primary",
+    target: '_blank',
+    text: 'Join Our Team',
+    href: '/careers',
+    icon: 'tabler:rocket',
+  }]}
+>
+  <Fragment slot="title">
+    Shape the Future of Technology with Cosmic Stack
+  </Fragment>
 
-  <CallToAction
-    actions={[{
-      variant: "primary",
-      target: '_blank',
-      text: 'Get templates',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    }]}
-  >
-    <Fragment slot="title">Be a part of our vision</Fragment>
-
-    <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
-    </Fragment>
-  </CallToAction>
+  <Fragment slot="subtitle">
+    Join our team of innovators, developers, and digital architects. We're building next-generation solutions 
+    that power enterprise transformation. Experience rapid growth, work with cutting-edge technologies, 
+    and make a real impact in the digital landscape.
+  </Fragment>
+</CallToAction>
 </Layout>
